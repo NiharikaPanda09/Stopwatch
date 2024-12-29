@@ -1,0 +1,95 @@
+*{
+   margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+#div-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#start,#stop ,#reset ,#lap{
+    display: flex;
+    flex-direction: row;
+}
+#start,#stop ,#reset ,#lap {
+    border: 7px dot-dot-dash pink;
+    cursor: pointer;
+    padding: 5px 10px 5px 10px;
+    background-color: violet;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    animation: pulseborder 2s infinite ease-in-out;
+
+}
+#start:hover,#stop:hover,#reset:hover ,#lap:hover{
+    background-color: blueviolet;
+}
+@keyframes pulseborder {
+    0%{
+        border-color: black;
+    }
+50%{
+    border-color: red;
+}
+100%{
+    border-color: black;
+}
+}
+h1{
+    margin-bottom: 70px;
+    animation: animate 2s infinite ease-in-out;
+}
+#timer{
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+@keyframes animate {
+    0%{
+        color: black;
+    }
+    25%{
+        color: blue;
+    }
+    50%{
+        color: red;
+    }
+    75%{
+        color: violet;
+    }
+    100%{
+        color: black;
+    }
+}
+#laps{
+    list-style-type: disc;
+    padding: 0;
+    margin-top: 5px;
+}
+#laps li{
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 5px 0;
+    animation: slideIn 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slideIn {
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+       opacity: 1;
+       transform: translateX(0);
+    }
+}
